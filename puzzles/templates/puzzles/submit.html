@@ -1,0 +1,7 @@
+<form action="{% url 'puzzles:grade' %}" method="post">
+{% csrf_token %}
+<input type="submit">
+{{ form }}
+</form>
+
+Incorrect Submissions: {{numIncorrect}}
