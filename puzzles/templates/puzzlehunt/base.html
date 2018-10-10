@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+	<head> 
+		<link rel="stylesheet" href="{% static 'stylesheet.css' %}"/>
+	</head> 
+	<body> 
+		<div id="header">
+			<div class="firstLine">
+				<img src="{% static 'mole.png' %}"/> 
+				Mole Day Puzzle Hunt
+				
+
+			</div> 
+			<br> 
+			<div class="secondLine">
+				<a href="/"> Home </a> &nbsp | &nbsp <a href="/about.html"> About </a> &nbsp | &nbsp <a href="puzzles/scoreboard">	Standings </a> &nbsp | &nbsp <a href="puzzles/submit"> Grader </a> &nbsp | &nbsp <a href = "https://sites.google.com/view/rmhsmolehunt"> Archives </a> 
+				
+				<button class="createAccount"> Create Account </button> 
+				<button class="login"> Login </button> 
+				
+			</div> 
+		</div> 
+		{% block content %}
+    {% endblock %}
+	</body> 
+</html> 

@@ -1,1 +1,7 @@
-hello
+{% extends "puzzlehunt/base.html" %}
+{% load static %}
+{% block content %}
+    <div id="home" style='background-image:url({% static "homeBackground.png" %});'>
+		Hello 
+	</div> 
+{% endblock %}

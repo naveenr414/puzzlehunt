@@ -19,7 +19,7 @@ def findCurrentPuzzle(request):
 
 # Create your views here.
 def submit(request):
-    if(request.session['username']==''):
+    if("username" not in request.session or request.session['username']==''):
         return HttpResponseRedirect(reverse('users:login'))
     else:
         form = GraderForm(request)
