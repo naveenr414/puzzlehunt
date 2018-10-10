@@ -22,4 +22,5 @@ urlpatterns = [
     path('users/',include('users.urls',namespace="users")),
     path('puzzles/',include('puzzles.urls',namespace="puzzles")),
     path('',views.home,name='home'),
+    path('about',views.about,name="about")
 ]
