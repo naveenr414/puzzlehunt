@@ -1,3 +1,7 @@
+{% extends "puzzlehunt/base.html" %}
+{% load static %}
+{% block content %}
+
 <form action="{% url 'users:submit' %}" method="post">
 {% csrf_token %}
 <input type="submit">
@@ -5,3 +9,5 @@
 </form>
 
 <a href="{% url 'users:register' %}"> Register </a> 
+
+{% endblock %} 

@@ -1,5 +1,12 @@
+{% extends "puzzlehunt/base.html" %}
+{% load static %}
+{% block content %}
+
+<br> 
 <form action="{% url 'users:create' %}" method="post">
 {% csrf_token %}
 <input type="submit">
 {{ form }}
 </form>
+
+{% endblock %} 

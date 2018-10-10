@@ -1,3 +1,6 @@
+{% extends "puzzlehunt/base.html" %}
+{% load static %}
+{% block content %}
 <form action="{% url 'puzzles:grade' %}" method="post">
 {% csrf_token %}
 <input type="submit">
@@ -5,3 +8,4 @@
 </form>
 
 Incorrect Submissions: {{numIncorrect}}
+{% endblock %} 

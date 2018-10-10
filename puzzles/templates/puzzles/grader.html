@@ -1,5 +1,9 @@
+{% extends "puzzlehunt/base.html" %}
+{% load static %}
+{% block content %}
 <ul>
 {% for team in teamList %}
 	<li> {{team.Name}}:{{team.Puzzle}} </li> 
 {% endfor %}
 </ul>
+{% endblock %} 
