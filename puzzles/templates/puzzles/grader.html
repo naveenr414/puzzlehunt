@@ -1,9 +1,17 @@
 {% extends "puzzlehunt/base.html" %}
 {% load static %}
 {% block content %}
-<ul>
-{% for team in teamList %}
-	<li> {{team.Name}}:{{team.Puzzle}} </li> 
-{% endfor %}
-</ul>
+
+
+
+<div class="scoreboard"> 
+	<h1 class="leaderHead"> Mole Day Leaderboard </h1> 
+
+	<table class="scoreboardTable" >
+		<tr> <td> <b> Team Name </b> </th> <td> <b> Current Puzzle </b> </th> </tr> 
+	{% for team in teamList %}
+		<tr> <td> {{team.Name}} </th> <td>{{team.Puzzle}} </th> </tr>  
+	{% endfor %}
+	</table>
+</div> 
 {% endblock %} 
