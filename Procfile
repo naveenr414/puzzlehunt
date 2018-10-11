@@ -1,1 +1,2 @@
-web: gunicorn puzzlehunt.wsgi --log-file -
+web: ggunicorn puzzlehunt.wsgi:application --preload --workers 1
+
